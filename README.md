@@ -36,3 +36,8 @@ ll
 git log  
 git diff  
 ```
+
+### Anaconda常用命令
+```
+pip install package -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
