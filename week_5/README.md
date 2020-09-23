@@ -19,14 +19,14 @@ $$\hat w_{ij} = \langle V_i,V_j \rangle$$
 ## Thinking3 DeepFM相比于FM解决了哪些问题，原理是怎样的
 **DeepFM: Deep Neural Networks + Factorization Machines**
 
-**原理：**DeepFM包括FM和DNN两个部分，先对Sparse Features的稀疏矩阵做Dense Embedding，结果由FM和DNN共享，FM负责提取低维特征，DNN负责提取高维特征。最终的预测由两部分输出的相加得到：
+**原理：** DeepFM包括FM和DNN两个部分，先对Sparse Features的稀疏矩阵做Dense Embedding，结果由FM和DNN共享，FM负责提取低维特征，DNN负责提取高维特征。最终的预测由两部分输出的相加得到：
 
 $$\hat y = sigmoid(y_{FM} + y_{DNN})$$
 
-**解决的问题：**FM可以做特征组合，但是计算量大，一般只考虑两阶特征组合。而DeepFM可以很好的解决这个问题：
+**解决的问题：** FM可以做特征组合，但是计算量大，一般只考虑两阶特征组合。而DeepFM可以很好的解决这个问题：
 
 ## Thinking4 Surprise工具中的baseline算法原理是怎样的？ BaselineOnly和KNNBaseline有什么区别？
-**baseline原理**：  
+**baseline原理：**  
 surprise中的baseline算法的目标函数是：
 
 $$\sum(r_{ui} - (\mu + b_u + b_i))^2 + \lambda (b_u^2 + b_i^2)$$
@@ -35,10 +35,15 @@ $$\sum(r_{ui} - (\mu + b_u + b_i))^2 + \lambda (b_u^2 + b_i^2)$$
 
 **BaselineOnly和KNNBaseline的区别：**  
 BaselineOnly是surprise中实现baseline算法的方法，算法原理如上。而KNNBaseline的算法原理是一种考虑了基线评分的基于邻域的算法。其中
+
 $$\hat r_{ui} = b_{ui} + \frac {\sum sim(u,v)*(r_{vi} - b_{vi})} {\sum sim(u,v)}$$
+
 是基于用户邻域的推荐算法
+
 $$\hat r_{ui} = b_{ui} + \frac {\sum sim(i,j)*(r_{uj} - b_{uj})} {\sum sim(i,j)}$$
+
 是基于物品邻域的推荐算法。具体在代码中通过以下来实现。
+
 ```{python}
 sim_options = {'name': 'cosine',
                'user_based': False  # compute  similarities between items
