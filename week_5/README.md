@@ -23,7 +23,10 @@ $$\hat w_{ij} = \langle V_i,V_j \rangle$$
 
 $$\hat y = sigmoid(y_{FM} + y_{DNN})$$
 
-**解决的问题：** FM可以做特征组合，但是计算量大，一般只考虑两阶特征组合。而DeepFM可以很好的解决这个问题：
+**解决的问题：** FM可以做特征组合，但是计算量大，一般只考虑两阶特征组合。  
+而DeepFM可以很好的解决这个问题：  
+deepfm不仅仅继承了fm思想，与dnn结合。deepfm本身是延续了wide&deep思想设计的，利用fm代替wide侧，增强模型记忆能力，deep侧增强模型泛化能力。  
+另外，如果fm计算量大，deepfm再次基础上计算量只会更大。以往计算量大指的是直接显式交叉的二阶特征计算量大，而fm则是解决这个问题，减少参数，减小计算量
 
 ## Thinking4 Surprise工具中的baseline算法原理是怎样的？ BaselineOnly和KNNBaseline有什么区别？
 **baseline原理：**  
