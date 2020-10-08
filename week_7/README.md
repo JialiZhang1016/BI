@@ -1,3 +1,3 @@
-- Thinking: [Thinking](./Thinking.ipynb) 
-- Action1: [Boston_Pytorch](./Boston_Pytorch.ipynb)
-- Action2: [Mobile Recommendation System EDA](./Mobile Recommendation System EDA.ipynb)
+- Thinking: [Thinking](https://github.com/JialiZhang1016/BI/tree/master/week_7/Thinking.ipynb) 
+- Action1: [Boston_Pytorch](https://github.com/JialiZhang1016/BI/tree/master/week_7/Boston_Pytorch.ipynb)
+- Action2: [Mobile Recommendation System EDA](https://github.com/JialiZhang1016/BI/blob/master/week_7/Mobile%20Recommendation%20System%20EDA.ipynb)
