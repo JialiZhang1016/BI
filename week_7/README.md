@@ -1,0 +1,3 @@
+- Thinking: [Thinking](./Thinking.ipynb) 
+- Action1: [Boston_Pytorch](./Boston_Pytorch.ipynb)
+- Action2: [Mobile Recommendation System EDA](./Mobile Recommendation System EDA.ipynb)
