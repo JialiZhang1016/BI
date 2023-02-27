@@ -1,4 +1,4 @@
-# 张佳莉 Machine learning and BI
+# Machine learning and BI
 
 ### git常用命令
 - 推送至远程仓库
